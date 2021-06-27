@@ -53,6 +53,3 @@ window.addEventListener("scroll", (event) => {
     }
 });
 
-document.addEventListener('keydown', event => {
-    
-})

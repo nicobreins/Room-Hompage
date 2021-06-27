@@ -145,7 +145,7 @@ main{
 
         @include mq(){
             display: grid;
-            grid-template-columns: 60% 1fr;
+            grid-template-columns: 58% 1fr;
         }
 
         .slider-img{
@@ -192,7 +192,7 @@ main{
                 }
 
                 @include mq(){
-                    padding: 2rem 2.5rem ;
+                    padding: 2vw 2.52vw;
 
                     img{
                         width: 1rem;
