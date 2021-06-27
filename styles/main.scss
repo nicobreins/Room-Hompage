@@ -154,14 +154,51 @@ main{
             width: 100%;
 
             @include mq(){
-                height: 100%;
-                width: auto;
+                // // height: 100%;
+                // width: 100%;
                 flex-basis: 100%;
             }
         }
 
         .slider-img.active{
             display: block;
+        }
+
+        .slider-buttons{
+            display: flex;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+
+            @include mq(){
+                left: 0;
+                right: inherit;
+            }
+            
+            button{
+                background-color: #000;
+                padding: 1rem 1.5rem ;
+                border: none;
+                margin: 0;
+                display: inline-block;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: hsl(0, 0%, 27%);
+                }
+
+                img{
+                    width: .6rem;
+                }
+
+                @include mq(){
+                    padding: 2rem 2.5rem ;
+
+                    img{
+                        width: 1rem;
+                    }
+                }
+            }
         }
 
         .slider{
@@ -183,37 +220,7 @@ main{
                     display: flex;
                 }
             }            
-            .slider-buttons{
-                display: flex;
-                position: absolute;
-                right: 0;
-                bottom: 0;
-                
-                button{
-                    background-color: #000;
-                    padding: 1rem 1.5rem ;
-                    border: none;
-                    margin: 0;
-                    display: inline-block;
-                    cursor: pointer;
-
-                    &:hover{
-                        background-color: hsl(0, 0%, 27%);
-                    }
-    
-                    img{
-                        width: .6rem;
-                    }
-
-                    @include mq(){
-                        padding: 2rem 2.5rem ;
-
-                        img{
-                            width: 1rem;
-                        }
-                    }
-                }
-            }
+            
         }
 
         .hero-content{
@@ -221,19 +228,21 @@ main{
             display: none;
             flex-direction: column;
             justify-content: center;
+            position: relative;
 
             &.active{
                 display: flex;
             }
             
             @include mq(){
-                padding: 6rem 5rem;
+                padding: 5rem;
             }
 
             h1{
                 font-size: 1.6rem;
                 font-weight: 600;
                 margin-top: 0;
+                margin-bottom: .2em;
 
                 @include mq(){
                     font-size: 2.4rem;
@@ -246,6 +255,10 @@ main{
                 color: #000;
                 letter-spacing: .8em;
                 font-weight: 500;
+
+                @include mq(){
+                    margin-bottom: 4rem;
+                }
 
                 &:hover{
                     color: hsl(0, 0%, 63%);

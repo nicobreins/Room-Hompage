@@ -141,13 +141,45 @@ main .hero-sec .slider-img {
 }
 @media (min-width: 900px) {
   main .hero-sec .slider-img {
-    height: 100%;
-    width: auto;
     flex-basis: 100%;
   }
 }
 main .hero-sec .slider-img.active {
   display: block;
+}
+main .hero-sec .slider-buttons {
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+@media (min-width: 900px) {
+  main .hero-sec .slider-buttons {
+    left: 0;
+    right: inherit;
+  }
+}
+main .hero-sec .slider-buttons button {
+  background-color: #000;
+  padding: 1rem 1.5rem;
+  border: none;
+  margin: 0;
+  display: inline-block;
+  cursor: pointer;
+}
+main .hero-sec .slider-buttons button:hover {
+  background-color: #454545;
+}
+main .hero-sec .slider-buttons button img {
+  width: 0.6rem;
+}
+@media (min-width: 900px) {
+  main .hero-sec .slider-buttons button {
+    padding: 2rem 2.5rem;
+  }
+  main .hero-sec .slider-buttons button img {
+    width: 1rem;
+  }
 }
 main .hero-sec .slider {
   position: relative;
@@ -168,52 +200,26 @@ main .hero-sec .slider.slider-desktop {
     display: flex;
   }
 }
-main .hero-sec .slider .slider-buttons {
-  display: flex;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
-main .hero-sec .slider .slider-buttons button {
-  background-color: #000;
-  padding: 1rem 1.5rem;
-  border: none;
-  margin: 0;
-  display: inline-block;
-  cursor: pointer;
-}
-main .hero-sec .slider .slider-buttons button:hover {
-  background-color: #454545;
-}
-main .hero-sec .slider .slider-buttons button img {
-  width: 0.6rem;
-}
-@media (min-width: 900px) {
-  main .hero-sec .slider .slider-buttons button {
-    padding: 2rem 2.5rem;
-  }
-  main .hero-sec .slider .slider-buttons button img {
-    width: 1rem;
-  }
-}
 main .hero-sec .hero-content {
   padding: 3.5rem 2rem;
   display: none;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 main .hero-sec .hero-content.active {
   display: flex;
 }
 @media (min-width: 900px) {
   main .hero-sec .hero-content {
-    padding: 6rem 5rem;
+    padding: 5rem;
   }
 }
 main .hero-sec .hero-content h1 {
   font-size: 1.6rem;
   font-weight: 600;
   margin-top: 0;
+  margin-bottom: 0.2em;
 }
 @media (min-width: 900px) {
   main .hero-sec .hero-content h1 {
@@ -226,6 +232,11 @@ main .hero-sec .hero-content .shop-link {
   color: #000;
   letter-spacing: 0.8em;
   font-weight: 500;
+}
+@media (min-width: 900px) {
+  main .hero-sec .hero-content .shop-link {
+    margin-bottom: 4rem;
+  }
 }
 main .hero-sec .hero-content .shop-link:hover {
   color: #a1a1a1;
