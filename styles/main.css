@@ -138,6 +138,11 @@ main .hero-sec .slider-img {
   display: none;
   box-sizing: border-box;
   width: 100%;
+  height: auto;
+}
+main .hero-sec .slider-img img {
+  width: 100%;
+  display: block;
 }
 @media (min-width: 900px) {
   main .hero-sec .slider-img {
@@ -153,10 +158,17 @@ main .hero-sec .slider-buttons {
   right: 0;
   bottom: 0;
 }
+main .hero-sec .slider-buttons.desktop {
+  display: none;
+}
 @media (min-width: 900px) {
   main .hero-sec .slider-buttons {
     left: 0;
     right: inherit;
+    display: none;
+  }
+  main .hero-sec .slider-buttons.desktop {
+    display: flex;
   }
 }
 main .hero-sec .slider-buttons button {
@@ -183,22 +195,6 @@ main .hero-sec .slider-buttons button img {
 }
 main .hero-sec .slider {
   position: relative;
-}
-main .hero-sec .slider.slider-mobile {
-  display: block;
-}
-@media (min-width: 900px) {
-  main .hero-sec .slider.slider-mobile {
-    display: none;
-  }
-}
-main .hero-sec .slider.slider-desktop {
-  display: none;
-}
-@media (min-width: 900px) {
-  main .hero-sec .slider.slider-desktop {
-    display: flex;
-  }
 }
 main .hero-sec .hero-content {
   padding: 3.5rem 2rem;

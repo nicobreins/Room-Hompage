@@ -152,6 +152,12 @@ main{
             display: none;
             box-sizing: border-box;
             width: 100%;
+            height: auto;
+
+            img{
+                width: 100%;
+                display: block;
+            }
 
             @include mq(){
                 // // height: 100%;
@@ -170,9 +176,18 @@ main{
             right: 0;
             bottom: 0;
 
+            &.desktop{
+                display: none;
+            }
+
             @include mq(){
                 left: 0;
                 right: inherit;
+                display: none;
+
+                &.desktop{
+                    display: flex;
+                }
             }
             
             button{
@@ -205,21 +220,21 @@ main{
             position: relative;
             // overflow: hidden;
 
-            &.slider-mobile{
-                display: block;
+            // &.slider-mobile{
+            //     display: block;
 
-                @include mq(){
-                    display: none;
-                }
-            }
+            //     @include mq(){
+            //         display: none;
+            //     }
+            // }
 
-            &.slider-desktop{
-                display: none;
+            // &.slider-desktop{
+            //     display: none;
 
-                @include mq(){
-                    display: flex;
-                }
-            }            
+            //     @include mq(){
+            //         display: flex;
+            //     }
+            // }            
             
         }
 

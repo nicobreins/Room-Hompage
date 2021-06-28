@@ -6,8 +6,7 @@ const hideMobNav = () => {
     document.getElementById('mob-nav-menu').classList.remove('active')
 }
 
-const sliderImg = document.getElementsByClassName('slider-img-mob');
-const sliderImgDesk = document.getElementsByClassName('slider-img-desk');
+const sliderImg = document.getElementsByClassName('slider-img');
 const heroCont = document.getElementsByClassName('hero-content')
 
 
@@ -19,8 +18,6 @@ const slideRight = () => {
             heroCont[i+1].classList.add('active');
             sliderImg[i].classList.remove('active');
             sliderImg[i+1].classList.add('active'); 
-            sliderImgDesk[i].classList.remove('active');
-            sliderImgDesk[i+1].classList.add('active'); 
 
             break;
         }
@@ -35,9 +32,7 @@ const slideLeft = () => {
             heroCont[i-1].classList.add('active');
             sliderImg[i].classList.remove('active');
             sliderImg[i-1].classList.add('active');
-            sliderImgDesk[i].classList.remove('active');
-            sliderImgDesk[i-1].classList.add('active');            
-                        
+                                    
             break;
             
         }

@@ -32,25 +32,32 @@
   <main>
     <section class="hero-sec">
       <div class="slider slider-mobile">
-        <img src="images/mobile-image-hero-1.jpg" alt="" class="slider-img slider-img-mob active">
-        <img src="images/mobile-image-hero-2.jpg" alt="" class="slider-img slider-img-mob">
-        <img src="images/mobile-image-hero-3.jpg" alt="" class="slider-img slider-img-mob">
+               <picture class="slider-img active">
+          <source media="(min-width: 900px)" srcset="images/desktop-image-hero-1.jpg">
+          <source srcset="images/mobile-image-hero-1.jpg">
+          <img src="images/desktop-image-hero-1.jpg" alt="" >        
+        </picture>
 
-        <div class="slider-buttons">
+        <picture class="slider-img">
+          <source media="(min-width: 900px)" srcset="images/desktop-image-hero-2.jpg">
+          <source srcset="images/mobile-image-hero-2.jpg">
+          <img src="images/desktop-image-hero-2.jpg" alt="" >        
+        </picture>
+
+        <picture class="slider-img">
+          <source media="(min-width: 900px)" srcset="images/desktop-image-hero-3.jpg">
+          <source srcset="images/mobile-image-hero-3.jpg">
+          <img src="images/desktop-image-hero-3.jpg" alt="" >        
+        </picture>
+
+        <div class="slider-buttons ">
           <button aria-label="slider-left-button" class="slider-btn" onclick="slideLeft()"><img src="images/icon-angle-left.svg" alt=""></button>
           <button aria-label="slider-right-button" class="slider-btn" onclick="slideRight()"><img src="images/icon-angle-right.svg" alt=""></button>
         </div>
       </div>
 
-      <div class="slider slider-desktop">
-        <img src="images/desktop-image-hero-1.jpg" alt="" class="slider-img slider-img-desk active">
-        <img src="images/desktop-image-hero-2.jpg" alt="" class="slider-img slider-img-desk">
-        <img src="images/desktop-image-hero-3.jpg" alt="" class="slider-img slider-img-desk">
-
-      </div>
-
       <div class="hero-content active">
-        <div class="slider-buttons">
+        <div class="slider-buttons desktop">
           <button aria-label="slider-left-button" class="slider-btn" onclick="slideLeft()"><img src="images/icon-angle-left.svg" alt=""></button>
           <button aria-label="slider-right-button" class="slider-btn" onclick="slideRight()"><img src="images/icon-angle-right.svg" alt=""></button>
         </div>
@@ -65,7 +72,7 @@
       </div>
 
       <div class="hero-content">
-        <div class="slider-buttons">
+        <div class="slider-buttons desktop">
           <button aria-label="slider-left-button" class="slider-btn" onclick="slideLeft()"><img src="images/icon-angle-left.svg" alt=""></button>
           <button aria-label="slider-right-button" class="slider-btn" onclick="slideRight()"><img src="images/icon-angle-right.svg" alt=""></button>
         </div>
@@ -79,7 +86,7 @@
       </div>
 
       <div class="hero-content">
-        <div class="slider-buttons">
+        <div class="slider-buttons desktop">
           <button aria-label="slider-left-button" class="slider-btn" onclick="slideLeft()"><img src="images/icon-angle-left.svg" alt=""></button>
           <button aria-label="slider-right-button" class="slider-btn" onclick="slideRight()"><img src="images/icon-angle-right.svg" alt=""></button>
         </div>
